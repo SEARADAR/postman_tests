@@ -1,0 +1,1017 @@
+{
+	"info": {
+		"_postman_id": "69bfeae8-ef75-4b6f-8112-091eb89f6b04",
+		"name": "Collection Authorization",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16516461"
+	},
+	"item": [
+		{
+			"name": "verify-phone-captcha",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=utf-8"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "Origin",
+						"value": "https://searadar.com"
+					},
+					{
+						"key": "Content-Length",
+						"value": "626"
+					},
+					{
+						"key": "Referer",
+						"value": "https://searadar.com/"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1.2 Safari/605.1.15"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Host",
+						"value": "searadar.com"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Cookie",
+						"value": "_hjAbsoluteSessionInProgress=0; _hjSession_3486198=eyJpZCI6ImE5NjQ2ZWYyLWFlOTktNDBkMS1iNjUyLTRmZmEzOTdlMzZlMSIsImMiOjE3MDI5ODk5NTkyMjAsInMiOjAsInIiOjAsInNiIjoxfQ==; _ga_41N490S5R2=GS1.1.1702989960.6.1.1702989961.0.0.0; AMP_78519976ee=JTdCJTIyZGV2aWNlSWQlMjIlM0ElMjIwMDMzNDFlZS04ZTE0LTQ4NWEtOGQzYy02MDY2MGI1NGUyZGUlMjIlMkMlMjJ1c2VySWQlMjIlM0ElMjJiY2JkZTA1MjBlYzdkNTAwZTQ3MDJmMzFiMjY2NGU4MyUyMiUyQyUyMnNlc3Npb25JZCUyMiUzQTE3MDI5ODk5NTkxMTklMkMlMjJvcHRPdXQlMjIlM0FmYWxzZSUyQyUyMmxhc3RFdmVudFRpbWUlMjIlM0ExNzAyOTg5OTYwNzU0JTJDJTIybGFzdEV2ZW50SWQlMjIlM0EzMDMlN0Q=; _ga=GA1.2.1261456892.1702890957; _ga_KLYDQKK193=GS1.2.1702975301.2.1.1702989959.20.0.0; _gid=GA1.2.323143076.1702890957; _uetsid=0de663d09d8611eeb533e7bc15912410; _uetvid=0de68cf09d8611ee892d51abb07f0d21; _gcl_au=1.1.1929142498.1702890957; _hjSessionUser_3486198=eyJpZCI6ImRiYTYxYzRiLTEzY2QtNTdjNy1iMDQ2LWE1MmRhODZiNzQ0OSIsImNyZWF0ZWQiOjE3MDI4OTA5NTgwNjEsImV4aXN0aW5nIjp0cnVlfQ==; _ym_isad=2; utm_campaign=test1; utm_content=test3; utm_medium=test2; utm_source=test4; utm_term=test5; __ddg1_=RFX9GejcHKyTJfR9tXBi; _token_expiration.custom=1705483255012; strategy=custom; AMP_MKTG_78519976ee=JTdCJTdE; _tt_enable_cookie=1; _ttp=uoO9CEkmEUoGDLPfAvviyWrrqgh; _ym_d=1702890958; _ym_uid=1702890958947912158"
+					},
+					{
+						"key": "Accept-Currency",
+						"value": "EUR"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"phone\":\"+995574250294\",\"token\":\"03AFcWeA5obmMI6UvNl0RwcDbi2rHQ-AZR-xB0a147TLw_Ue9AaA71Iyq0JUUP2rQnkNEEPXkILXHpMGvVzSx1XH_DOH9MHrGEZC-oe8FToRb_5BTwpZFdjb9xfQzg09HbRJ56AmAQlGNdUCB0ZhpeuzPSQ11v5bEFKl06cdMfbjutJtMIlcrwgyz4hWG8tnOeKqkU6vkhCpOb8mnNUNwg0hoNFihpjmWKZPbzLA-A8BM2-uIZFDH8gYWPUF4TRjXxutgHeVnY6AndcQzgjr14Hnz0FOGFR6qnSRDia3voC0tKI5iOXtUB6peyoINxlfYxySnW8j0LgAuQvVUFAcAQTDxb3LFMnCaF9B3fpb4adKm3wfwIPK_EIBGFNbodJmypCquOwUKw1f0BlwRZVByDlKQ7UamsdGioaXd_eUKtGZkZ-iZ5_X6ajOMbLO9r6md9dwhhDAwHH7a_vEw7O2KxUJvuojbI2vgdBC9zITflyZSzt2Jxtqyix2FcKTh4ImVVJlBRMIZCai2R50KBNWlh6SwEmQqYHPdMQjU6bLzghPwUONNJKn_7RENVgM7Yu4UW2GLchH3Z2Ukq\"}"
+				},
+				"url": {
+					"raw": "https://searadar.com/api/auth/verify-phone-captcha",
+					"protocol": "https",
+					"host": [
+						"searadar",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"verify-phone-captcha"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth/fast-auth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"X-Auth\"",
+							"var value = pm.response.json().data[\"token\"]",
+							"pm.collectionVariables.set(key, value);",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "searadar.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-currency",
+						"value": "EUR"
+					},
+					{
+						"key": "accept-language",
+						"value": "en"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json;charset=UTF-8"
+					},
+					{
+						"key": "cookie",
+						"value": "tmr_lvid=bfd2bb9d0e6f1acf1bc528e1aa946726; tmr_lvidTS=1670402937982; _ym_uid=1670402938958425301; _ym_d=1670402938; _gcl_au=1.1.390718941.1670402938; _ga=GA1.2.1775626491.1670402939; _tt_enable_cookie=1; _ttp=rd5ezFXvkyItCbSntpVfGYxC7Wm; tmr_detect=1%7C1670915542435; _ym_isad=1; _gid=GA1.2.1071618871.1670915543; _gat_UA-101282570-1=1; _ym_visorc=w; _uetsid=7dddd7d07ab511edafb3535d8581a2ff; _uetvid=fd7c7800760b11ed80f5f581f6d00dc5"
+					},
+					{
+						"key": "origin",
+						"value": "https://searadar.com"
+					},
+					{
+						"key": "referer",
+						"value": "https://searadar.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?1"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Android\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Mobile Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\": \"+995557560792\",\n    \"verification_code\": \"99999\"\n}"
+				},
+				"url": {
+					"raw": "https://searadar.com/api/auth/fast-auth",
+					"protocol": "https",
+					"host": [
+						"searadar",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"fast-auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth/get-user-data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"check id\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.data.user_data[\"id\"]).to.eql(22916);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					},
+					{
+						"key": "Host",
+						"value": "searadar.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://searadar.com/"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1.2 Safari/605.1.15"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Cookie",
+						"value": "authToken=aFqjGcVokB-mEK6Kvx7VD9YHjJQvC8o3SFrO3M6o8So; _hjIncludedInSessionSample_3486198=0; _uetmsclkid=_uete0c52c711b641afd7ba949f97a34dbc3; _uetsid=c1ef7c60a3c911ee830b31346315b8fa; _uetvid=242483c09ffb11ee87a7cf5a0bd89395; _ga_KLYDQKK193=GS1.2.1703579743.3.1.1703591590.60.0.0; AMP_78519976ee=JTdCJTIyZGV2aWNlSWQlMjIlM0ElMjI0NTYwYTMxNi1lZjY4LTQ3ZWQtYjU3ZC00MzQyYmFiZDQ3NWQlMjIlMkMlMjJ1c2VySWQlMjIlM0ElMjJiYTA2NTE3NTkyMWU2MWQyMTNjNzUwMDRjMDIwNWE5YiUyMiUyQyUyMnNlc3Npb25JZCUyMiUzQTE3MDM1OTE1Mjk2NDQlMkMlMjJvcHRPdXQlMjIlM0FmYWxzZSUyQyUyMmxhc3RFdmVudFRpbWUlMjIlM0ExNzAzNTkxNTI5OTkyJTJDJTIybGFzdEV2ZW50SWQlMjIlM0E2NDklN0Q=; _ga=GA1.2.1958723538.1703160674; _ga_41N490S5R2=GS1.1.1703591529.8.0.1703591529.0.0.0; _gcl_au=1.1.1102835859.1703160674; _gid=GA1.2.1738993852.1703579743; _hjAbsoluteSessionInProgress=0; _hjSessionUser_3486198=eyJpZCI6IjdmMGY1MmU5LTIwNDctNWRlZC1iZDA2LTdiNjI4NmMyNzZkNSIsImNyZWF0ZWQiOjE3MDMxNjExNDkwNjQsImV4aXN0aW5nIjp0cnVlfQ==; _hjSession_3486198=eyJpZCI6IjlkYjM5ODQyLTk5NDQtNDliYi04NmE2LTFkNDY0NDA4M2U3ZiIsImMiOjE3MDM1OTE1Mjk3MDAsInMiOjAsInIiOjAsInNiIjoxfQ==; _ym_visorc=w; utm_campaign=Search[AllTraf]West; utm_content=rent yacht greece; utm_medium=landing; utm_source=bing; utm_term=LN1; AMP_MKTG_78519976ee=JTdCJTdE; _ym_isad=2; _token_expiration.custom=1705828560147; strategy=custom; _tt_enable_cookie=1; _ttp=rJNKACuUbDpoD5435TmsqM2CrEK; _ym_d=1703160676; _ym_uid=170316067696977388"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Accept-Currency",
+						"value": "EUR"
+					},
+					{
+						"key": "X-Auth-Token",
+						"value": "{{X-Auth}}"
+					}
+				],
+				"url": {
+					"raw": "https://searadar.com/api/auth/get-user-data",
+					"protocol": "https",
+					"host": [
+						"searadar",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"get-user-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fast-auth negative incorrect verification_code",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"X-Auth\"",
+							"var value = pm.response.json().data[\"token\"]",
+							"pm.collectionVariables.set(key, value);",
+							"",
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "searadar.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-currency",
+						"value": "EUR"
+					},
+					{
+						"key": "accept-language",
+						"value": "en"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json;charset=UTF-8"
+					},
+					{
+						"key": "cookie",
+						"value": "tmr_lvid=bfd2bb9d0e6f1acf1bc528e1aa946726; tmr_lvidTS=1670402937982; _ym_uid=1670402938958425301; _ym_d=1670402938; _gcl_au=1.1.390718941.1670402938; _ga=GA1.2.1775626491.1670402939; _tt_enable_cookie=1; _ttp=rd5ezFXvkyItCbSntpVfGYxC7Wm; tmr_detect=1%7C1670915542435; _ym_isad=1; _gid=GA1.2.1071618871.1670915543; _gat_UA-101282570-1=1; _ym_visorc=w; _uetsid=7dddd7d07ab511edafb3535d8581a2ff; _uetvid=fd7c7800760b11ed80f5f581f6d00dc5"
+					},
+					{
+						"key": "origin",
+						"value": "https://searadar.com"
+					},
+					{
+						"key": "referer",
+						"value": "https://searadar.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?1"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Android\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Mobile Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\": \"+995557560792\",\n    \"verification_code\": \"11111\"\n}"
+				},
+				"url": {
+					"raw": "https://searadar.com/api/auth/fast-auth",
+					"protocol": "https",
+					"host": [
+						"searadar",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"fast-auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth/get-user-data negative incorrect verification_code",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});",
+							"",
+							"pm.test(\"check response message\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.message).to.eql(\"Invalid credentials.\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					},
+					{
+						"key": "Host",
+						"value": "searadar.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://searadar.com/"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1.2 Safari/605.1.15"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Cookie",
+						"value": "authToken=aFqjGcVokB-mEK6Kvx7VD9YHjJQvC8o3SFrO3M6o8So; _hjIncludedInSessionSample_3486198=0; _uetmsclkid=_uete0c52c711b641afd7ba949f97a34dbc3; _uetsid=c1ef7c60a3c911ee830b31346315b8fa; _uetvid=242483c09ffb11ee87a7cf5a0bd89395; _ga_KLYDQKK193=GS1.2.1703579743.3.1.1703591590.60.0.0; AMP_78519976ee=JTdCJTIyZGV2aWNlSWQlMjIlM0ElMjI0NTYwYTMxNi1lZjY4LTQ3ZWQtYjU3ZC00MzQyYmFiZDQ3NWQlMjIlMkMlMjJ1c2VySWQlMjIlM0ElMjJiYTA2NTE3NTkyMWU2MWQyMTNjNzUwMDRjMDIwNWE5YiUyMiUyQyUyMnNlc3Npb25JZCUyMiUzQTE3MDM1OTE1Mjk2NDQlMkMlMjJvcHRPdXQlMjIlM0FmYWxzZSUyQyUyMmxhc3RFdmVudFRpbWUlMjIlM0ExNzAzNTkxNTI5OTkyJTJDJTIybGFzdEV2ZW50SWQlMjIlM0E2NDklN0Q=; _ga=GA1.2.1958723538.1703160674; _ga_41N490S5R2=GS1.1.1703591529.8.0.1703591529.0.0.0; _gcl_au=1.1.1102835859.1703160674; _gid=GA1.2.1738993852.1703579743; _hjAbsoluteSessionInProgress=0; _hjSessionUser_3486198=eyJpZCI6IjdmMGY1MmU5LTIwNDctNWRlZC1iZDA2LTdiNjI4NmMyNzZkNSIsImNyZWF0ZWQiOjE3MDMxNjExNDkwNjQsImV4aXN0aW5nIjp0cnVlfQ==; _hjSession_3486198=eyJpZCI6IjlkYjM5ODQyLTk5NDQtNDliYi04NmE2LTFkNDY0NDA4M2U3ZiIsImMiOjE3MDM1OTE1Mjk3MDAsInMiOjAsInIiOjAsInNiIjoxfQ==; _ym_visorc=w; utm_campaign=Search[AllTraf]West; utm_content=rent yacht greece; utm_medium=landing; utm_source=bing; utm_term=LN1; AMP_MKTG_78519976ee=JTdCJTdE; _ym_isad=2; _token_expiration.custom=1705828560147; strategy=custom; _tt_enable_cookie=1; _ttp=rJNKACuUbDpoD5435TmsqM2CrEK; _ym_d=1703160676; _ym_uid=170316067696977388"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Accept-Currency",
+						"value": "EUR"
+					},
+					{
+						"key": "X-Auth-Token",
+						"value": "{{X-Auth}}"
+					}
+				],
+				"url": {
+					"raw": "https://searadar.com/api/auth/get-user-data",
+					"protocol": "https",
+					"host": [
+						"searadar",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"get-user-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fast-auth negative incorrect phone",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"X-Auth\"",
+							"var value = pm.response.json().data[\"token\"]",
+							"pm.collectionVariables.set(key, value);",
+							"",
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "searadar.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-currency",
+						"value": "EUR"
+					},
+					{
+						"key": "accept-language",
+						"value": "en"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json;charset=UTF-8"
+					},
+					{
+						"key": "cookie",
+						"value": "tmr_lvid=bfd2bb9d0e6f1acf1bc528e1aa946726; tmr_lvidTS=1670402937982; _ym_uid=1670402938958425301; _ym_d=1670402938; _gcl_au=1.1.390718941.1670402938; _ga=GA1.2.1775626491.1670402939; _tt_enable_cookie=1; _ttp=rd5ezFXvkyItCbSntpVfGYxC7Wm; tmr_detect=1%7C1670915542435; _ym_isad=1; _gid=GA1.2.1071618871.1670915543; _gat_UA-101282570-1=1; _ym_visorc=w; _uetsid=7dddd7d07ab511edafb3535d8581a2ff; _uetvid=fd7c7800760b11ed80f5f581f6d00dc5"
+					},
+					{
+						"key": "origin",
+						"value": "https://searadar.com"
+					},
+					{
+						"key": "referer",
+						"value": "https://searadar.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?1"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Android\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Mobile Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\": \"+9955575607921\",\n    \"verification_code\": \"99999\"\n}"
+				},
+				"url": {
+					"raw": "https://searadar.com/api/auth/fast-auth",
+					"protocol": "https",
+					"host": [
+						"searadar",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"fast-auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth/get-user-data negative incorrect phone",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});",
+							"",
+							"pm.test(\"check response message\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.message).to.eql(\"Invalid credentials.\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					},
+					{
+						"key": "Host",
+						"value": "searadar.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://searadar.com/"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1.2 Safari/605.1.15"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Cookie",
+						"value": "authToken=aFqjGcVokB-mEK6Kvx7VD9YHjJQvC8o3SFrO3M6o8So; _hjIncludedInSessionSample_3486198=0; _uetmsclkid=_uete0c52c711b641afd7ba949f97a34dbc3; _uetsid=c1ef7c60a3c911ee830b31346315b8fa; _uetvid=242483c09ffb11ee87a7cf5a0bd89395; _ga_KLYDQKK193=GS1.2.1703579743.3.1.1703591590.60.0.0; AMP_78519976ee=JTdCJTIyZGV2aWNlSWQlMjIlM0ElMjI0NTYwYTMxNi1lZjY4LTQ3ZWQtYjU3ZC00MzQyYmFiZDQ3NWQlMjIlMkMlMjJ1c2VySWQlMjIlM0ElMjJiYTA2NTE3NTkyMWU2MWQyMTNjNzUwMDRjMDIwNWE5YiUyMiUyQyUyMnNlc3Npb25JZCUyMiUzQTE3MDM1OTE1Mjk2NDQlMkMlMjJvcHRPdXQlMjIlM0FmYWxzZSUyQyUyMmxhc3RFdmVudFRpbWUlMjIlM0ExNzAzNTkxNTI5OTkyJTJDJTIybGFzdEV2ZW50SWQlMjIlM0E2NDklN0Q=; _ga=GA1.2.1958723538.1703160674; _ga_41N490S5R2=GS1.1.1703591529.8.0.1703591529.0.0.0; _gcl_au=1.1.1102835859.1703160674; _gid=GA1.2.1738993852.1703579743; _hjAbsoluteSessionInProgress=0; _hjSessionUser_3486198=eyJpZCI6IjdmMGY1MmU5LTIwNDctNWRlZC1iZDA2LTdiNjI4NmMyNzZkNSIsImNyZWF0ZWQiOjE3MDMxNjExNDkwNjQsImV4aXN0aW5nIjp0cnVlfQ==; _hjSession_3486198=eyJpZCI6IjlkYjM5ODQyLTk5NDQtNDliYi04NmE2LTFkNDY0NDA4M2U3ZiIsImMiOjE3MDM1OTE1Mjk3MDAsInMiOjAsInIiOjAsInNiIjoxfQ==; _ym_visorc=w; utm_campaign=Search[AllTraf]West; utm_content=rent yacht greece; utm_medium=landing; utm_source=bing; utm_term=LN1; AMP_MKTG_78519976ee=JTdCJTdE; _ym_isad=2; _token_expiration.custom=1705828560147; strategy=custom; _tt_enable_cookie=1; _ttp=rJNKACuUbDpoD5435TmsqM2CrEK; _ym_d=1703160676; _ym_uid=170316067696977388"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Accept-Currency",
+						"value": "EUR"
+					},
+					{
+						"key": "X-Auth-Token",
+						"value": "{{X-Auth}}"
+					}
+				],
+				"url": {
+					"raw": "https://searadar.com/api/auth/get-user-data",
+					"protocol": "https",
+					"host": [
+						"searadar",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"get-user-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fast-auth negative empty phone/code",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"X-Auth\"",
+							"var value = pm.response.json().data[\"token\"]",
+							"pm.collectionVariables.set(key, value);",
+							"",
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "searadar.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-currency",
+						"value": "EUR"
+					},
+					{
+						"key": "accept-language",
+						"value": "en"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json;charset=UTF-8"
+					},
+					{
+						"key": "cookie",
+						"value": "tmr_lvid=bfd2bb9d0e6f1acf1bc528e1aa946726; tmr_lvidTS=1670402937982; _ym_uid=1670402938958425301; _ym_d=1670402938; _gcl_au=1.1.390718941.1670402938; _ga=GA1.2.1775626491.1670402939; _tt_enable_cookie=1; _ttp=rd5ezFXvkyItCbSntpVfGYxC7Wm; tmr_detect=1%7C1670915542435; _ym_isad=1; _gid=GA1.2.1071618871.1670915543; _gat_UA-101282570-1=1; _ym_visorc=w; _uetsid=7dddd7d07ab511edafb3535d8581a2ff; _uetvid=fd7c7800760b11ed80f5f581f6d00dc5"
+					},
+					{
+						"key": "origin",
+						"value": "https://searadar.com"
+					},
+					{
+						"key": "referer",
+						"value": "https://searadar.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?1"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Android\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Mobile Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\": \"\",\n    \"verification_code\": \"\"\n}"
+				},
+				"url": {
+					"raw": "https://searadar.com/api/auth/fast-auth",
+					"protocol": "https",
+					"host": [
+						"searadar",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"fast-auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth/get-user-data negative empty phone/code",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});",
+							"",
+							"pm.test(\"check response message\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.message).to.eql(\"Invalid credentials.\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					},
+					{
+						"key": "Host",
+						"value": "searadar.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://searadar.com/"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1.2 Safari/605.1.15"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Cookie",
+						"value": "authToken=aFqjGcVokB-mEK6Kvx7VD9YHjJQvC8o3SFrO3M6o8So; _hjIncludedInSessionSample_3486198=0; _uetmsclkid=_uete0c52c711b641afd7ba949f97a34dbc3; _uetsid=c1ef7c60a3c911ee830b31346315b8fa; _uetvid=242483c09ffb11ee87a7cf5a0bd89395; _ga_KLYDQKK193=GS1.2.1703579743.3.1.1703591590.60.0.0; AMP_78519976ee=JTdCJTIyZGV2aWNlSWQlMjIlM0ElMjI0NTYwYTMxNi1lZjY4LTQ3ZWQtYjU3ZC00MzQyYmFiZDQ3NWQlMjIlMkMlMjJ1c2VySWQlMjIlM0ElMjJiYTA2NTE3NTkyMWU2MWQyMTNjNzUwMDRjMDIwNWE5YiUyMiUyQyUyMnNlc3Npb25JZCUyMiUzQTE3MDM1OTE1Mjk2NDQlMkMlMjJvcHRPdXQlMjIlM0FmYWxzZSUyQyUyMmxhc3RFdmVudFRpbWUlMjIlM0ExNzAzNTkxNTI5OTkyJTJDJTIybGFzdEV2ZW50SWQlMjIlM0E2NDklN0Q=; _ga=GA1.2.1958723538.1703160674; _ga_41N490S5R2=GS1.1.1703591529.8.0.1703591529.0.0.0; _gcl_au=1.1.1102835859.1703160674; _gid=GA1.2.1738993852.1703579743; _hjAbsoluteSessionInProgress=0; _hjSessionUser_3486198=eyJpZCI6IjdmMGY1MmU5LTIwNDctNWRlZC1iZDA2LTdiNjI4NmMyNzZkNSIsImNyZWF0ZWQiOjE3MDMxNjExNDkwNjQsImV4aXN0aW5nIjp0cnVlfQ==; _hjSession_3486198=eyJpZCI6IjlkYjM5ODQyLTk5NDQtNDliYi04NmE2LTFkNDY0NDA4M2U3ZiIsImMiOjE3MDM1OTE1Mjk3MDAsInMiOjAsInIiOjAsInNiIjoxfQ==; _ym_visorc=w; utm_campaign=Search[AllTraf]West; utm_content=rent yacht greece; utm_medium=landing; utm_source=bing; utm_term=LN1; AMP_MKTG_78519976ee=JTdCJTdE; _ym_isad=2; _token_expiration.custom=1705828560147; strategy=custom; _tt_enable_cookie=1; _ttp=rJNKACuUbDpoD5435TmsqM2CrEK; _ym_d=1703160676; _ym_uid=170316067696977388"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Accept-Currency",
+						"value": "EUR"
+					},
+					{
+						"key": "X-Auth-Token",
+						"value": "{{X-Auth}}"
+					}
+				],
+				"url": {
+					"raw": "https://searadar.com/api/auth/get-user-data",
+					"protocol": "https",
+					"host": [
+						"searadar",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"get-user-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fast-auth negative phone/code",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "searadar.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-currency",
+						"value": "EUR"
+					},
+					{
+						"key": "accept-language",
+						"value": "en"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json;charset=UTF-8"
+					},
+					{
+						"key": "cookie",
+						"value": "tmr_lvid=bfd2bb9d0e6f1acf1bc528e1aa946726; tmr_lvidTS=1670402937982; _ym_uid=1670402938958425301; _ym_d=1670402938; _gcl_au=1.1.390718941.1670402938; _ga=GA1.2.1775626491.1670402939; _tt_enable_cookie=1; _ttp=rd5ezFXvkyItCbSntpVfGYxC7Wm; tmr_detect=1%7C1670915542435; _ym_isad=1; _gid=GA1.2.1071618871.1670915543; _gat_UA-101282570-1=1; _ym_visorc=w; _uetsid=7dddd7d07ab511edafb3535d8581a2ff; _uetvid=fd7c7800760b11ed80f5f581f6d00dc5"
+					},
+					{
+						"key": "origin",
+						"value": "https://searadar.com"
+					},
+					{
+						"key": "referer",
+						"value": "https://searadar.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?1"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Android\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Mobile Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\": \"+!@#$%^&*()_\",\n    \"verification_code\": null\n}"
+				},
+				"url": {
+					"raw": "https://searadar.com/api/auth/fast-auth",
+					"protocol": "https",
+					"host": [
+						"searadar",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"fast-auth"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "token_1",
+			"value": ""
+		},
+		{
+			"key": "token",
+			"value": ""
+		},
+		{
+			"key": "x-auth-token",
+			"value": ""
+		},
+		{
+			"key": "AuthToken",
+			"value": ""
+		},
+		{
+			"key": "X-Auth-Token",
+			"value": ""
+		},
+		{
+			"key": "X-Auth",
+			"value": ""
+		}
+	]
+}
